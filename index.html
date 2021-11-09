@@ -4,44 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
-
   <body>
-    <header>
-      <div class="content">
-        <div>
-          <h1>
-            Hi, I'm Łukasz Kuc
-            <h2>Junior Frontend Developer</h2>
+    <main class="main">
+      <nav class="nav">
+        <div class="introduce">
+          <h1 class="name">
+            Łukasz Kuc
+            <span class="role"> Junior Front-end Developer </span>
           </h1>
-          <details>
-            <summary>About me</summary>
-
-            <p class="box"><a href="/projects.html">My projects</a></p>
-            <p>
-              <a href="https://www.linkedin.com/in/%C5%82ukasz-kuc-b83666a7/"
-                ><img class="icons" src="/img/linkedin.png" alt="LinkedIn"
-              /></a>
-
-              <a href="https://github.com/kuc-lukasz"
-                ><img
-                  class="icons"
-                  src="/img/iconmonstr-github-3-32.png"
-                  alt="github"
-              /></a>
-            </p>
-          </details>
         </div>
-        <div>
-          <img
-            class="profile"
-            src="/img/15168845_1135039816550126_6835008956471414500_o.jpg"
-            alt="profile-photo"
-          />
+        <h3 class="describe-me">
+          html | css | javascript | react | typescript
+        </h3>
+        <div class="buttons-nav">
+          <li class="btn-about buttons">
+            <a id="btn-table" class="asdasd" href="">About me</a>
+          </li>
+          <!-- <li class="btn-projects buttons">
+            <a href="">Projects</a>
+          </li> -->
         </div>
+        <div class="contacts">
+
+          <ul class="informations">
+
+            <li class="xyz">
+              <img class="icons" src="./img/callme.png" />
+              <a class="about-me-buttons" href="tel:607154416"> Call me!</a>
+            </li>
+
+            <li class="xyz">
+              <img class="icons" src="./img/textme.png" />
+              <a class="about-me-buttons" href="mailto:lukaszkuc93@gmail.com"
+                >Write me!</a>
+            </li>
+
+              <li class="xyz">
+                
+                <a class="about-me-buttons" href="https://github.com/kuc-lukasz"><img class="icons" src="./img/iconmonstr-github-3-32.png" /><span>Github</span></a>
+              </li>
+              
+            <li class="xyz">
+                <a class="about-me-buttons" href="https://www.linkedin.com/in/%C5%82ukasz-kuc-b83666a7/">
+                  <img class="icons" src="./img/linkedin.png"/><span>Linkedin</span>
+                </a>
+            </li>
+            
+          </ul>
+        </div>
+        <!-- <a >Write me</a>
+        <a >Call me</a> -->
+      </nav>
+      <div>
+        <img
+          class="my-pic"
+          src="./img/portret.jpg"
+          alt="side-logo"
+        />
       </div>
-    </header>
+    </main>
+    <script src="./index.js"></script>
   </body>
 </html>
