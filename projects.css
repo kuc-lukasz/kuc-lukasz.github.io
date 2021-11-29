@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Rubik:wght@300&display=swap');
+
+*{
+    font-family: 'Mukta', sans-serif;
+}
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    5deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(68, 203, 205, 1) 100%
+  );
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px;
+  font-family: 'Mukta', sans-serif;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(./img/tlo.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.6;
+  }
+  .close-bottom{
+      margin-top: 10px;
+      width: 40px;
+      height: 40px;
+  }
+  .main-h1{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 2px 4px 10px black;
+    font-size: xxx-large;
+    margin-bottom: -31px;
+    
+  }
+  .main-container-projects{
+      max-width: 960px;
+      height: max-content;
+      padding: 20px;
+      border: 2px solid black;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      border-radius: 20px;
+      text-transform: uppercase;
+      box-shadow: 2px 4px 10px black;
+      margin: 5px;
+
+  }
+  .single-project{
+      width: 290px;
+      height: 350px;
+      border: 2px solid black;
+      margin: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 2px 4px 10px black;
+      background-color: rgba(211, 211, 211, 0.301);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      cursor: pointer;
+  }
+  .single-project-img{
+width: 250px;
+height: 150px;
+border-radius: 10px;
+box-shadow: 2px 4px 10px black;
+margin-bottom: 30px;
+  }
+  .language{
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  .single-project-lang{
+    margin: 5px;
+    display: inline-block;
+    border: 2px solid black;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px black;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color: rgba(173, 216, 230, 0.5);
+  }
+  .single-project-window{
+    position: absolute;
+    width: 1060px;
+    background-color: rgba(0, 0, 0, 0.925);
+    border-radius: 20px;
+    height: 600px;
+    box-shadow: 2px 4px 10px black;
+    left: 0; 
+    right: 0; 
+    top: 0;
+    margin-left: auto; 
+    margin-right: auto; 
+    color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    transition: 1s all;
+  }
+  .close-bottom-blue{
+      margin:10px 0px 10px 0px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+  }
+  .single-project-window-name{
+    margin: 0px 5px 5px 5px;
+  }
+  iframe{
+    border-radius: 10px;
+    border: 2px solid lightblue;
+  }
+  .video-describe{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px;
+
+  }
+  .single-project-window-describe{
+      margin-left: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 350px;
+      text-transform: none;
+      text-align: justify;
+  }
+  .single-project-window-github{
+text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
+color: lightblue;
+  }
+  .single-project-window-github>p{
+    margin-left: 20px;
+  }
+  .single-project-window-github>img{
+    width: 40px;
+    height: 40px;
+  }
+  
+.display{
+  top: 0;
+}
+.hide-display{
+  top: -100%
+}
+
+  @media screen and (max-width: 1000px){
+    .main-container-projects{
+        justify-content: center;
+    }
+  }
