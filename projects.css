@@ -105,7 +105,8 @@ margin-bottom: 30px;
   }
   .single-project-window{
     position: absolute;
-    width: 1060px;
+    max-width: 960px;
+    padding: 50px;
     background-color: rgba(0, 0, 0, 0.925);
     border-radius: 20px;
     height: 600px;
@@ -128,6 +129,12 @@ margin-bottom: 30px;
       width: 30px;
       height: 30px;
       cursor: pointer;
+      z-index: 2;
+      background-image: url(/img/xbottom-blue.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      
   }
   .single-project-window-name{
     margin: 0px 5px 5px 5px;
@@ -135,6 +142,8 @@ margin-bottom: 30px;
   iframe{
     border-radius: 10px;
     border: 2px solid lightblue;
+    width: 400px;
+    height: 200px;
   }
   .video-describe{
       display: flex;
@@ -144,12 +153,12 @@ margin-bottom: 30px;
 
   }
   .single-project-window-describe{
-      margin-left: 35px;
+      margin-left: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 350px;
+      width: 400px;
       text-transform: none;
       text-align: justify;
   }
@@ -169,10 +178,10 @@ color: lightblue;
   }
   
 .display{
-  top: 0;
+  top: 0%;
 }
 .hide-display{
-  top: -130%
+  top: -200%
 }
 
   @media screen and (max-width: 1000px){
