@@ -43,15 +43,15 @@ body::before {
     text-transform: uppercase;
     letter-spacing: 10px;
     text-shadow: 2px 4px 10px black;
-    font-size: xxx-large;
-    margin-bottom: -31px;
+    font-size: xx-large;
+    margin-bottom: -22px;
     
   }
   .main-container-projects{
       max-width: 960px;
       height: max-content;
       padding: 20px;
-      border: 2px solid black;
+      border-top: 2px solid black;
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
@@ -107,37 +107,42 @@ margin-bottom: 30px;
     position: absolute;
     max-width: 960px;
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.725);
     border-radius: 20px;
     height: 600px;
     box-shadow: 2px 4px 10px black;
     left: 0; 
     right: 0; 
-    top: 0;
+    top: -200%;
     margin-left: auto; 
     margin-right: auto; 
     color: lightblue;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    z-index: 1;
     transition: 1s all;
   }
   .close-bottom-blue{
-      margin:10px 0px 10px 0px;
+      margin:0 10px 55px 10px;
       width: 30px;
       height: 30px;
       cursor: pointer;
       z-index: 2;
       background-image: url(/img/xbottom-blue.png);
+      border: none;
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      background-color: inherit;
       
   }
+  .close-bottom-blue:hover{
+    width: 35px;
+    height: 35px;
+  }
   .single-project-window-name{
-    margin: 0px 5px 5px 5px;
+    margin: 0px 5px 60px 5px;
   }
   iframe{
     border-radius: 10px;
@@ -148,8 +153,8 @@ margin-bottom: 30px;
   .video-describe{
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin: 30px;
+      align-items: flex-start;
+      margin: 0px 30px 30px 30px
 
   }
   .single-project-window-describe{
@@ -161,6 +166,9 @@ margin-bottom: 30px;
       width: 400px;
       text-transform: none;
       text-align: justify;
+  }
+  .single-project-window-describe>:first-child{
+    margin-top: 0px;
   }
   .single-project-window-github{
 text-decoration: none;
@@ -177,11 +185,8 @@ color: lightblue;
     height: 40px;
   }
   
-.display{
-  top: 0%;
-}
-.hide-display{
-  top: -200%
+.view{
+  top: 0
 }
 
   @media screen and (max-width: 1000px){
