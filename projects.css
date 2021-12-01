@@ -42,22 +42,22 @@ body::before {
   .main-h1{
     text-transform: uppercase;
     letter-spacing: 10px;
-    text-shadow: 2px 4px 10px black;
+    text-shadow: 2px 4px 10px rgb(5, 64, 66);
     font-size: xx-large;
-    margin-bottom: -22px;
-    
+    margin-bottom: 5px;
   }
+
   .main-container-projects{
       max-width: 960px;
       height: max-content;
       padding: 20px;
-      border-top: 2px solid black;
+      /* border-top: 2px solid black; */
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
       border-radius: 20px;
       text-transform: uppercase;
-      box-shadow: 2px 4px 10px black;
+      /* box-shadow: 2px 4px 10px rgb(0, 0, 0); */
       margin: 5px;
 
   }
@@ -68,15 +68,19 @@ body::before {
       margin: 10px;
       border-radius: 10px;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
       box-shadow: 2px 4px 10px black;
-      background-color: rgba(211, 211, 211, 0.301);
+      background-color: rgba(211, 211, 211, 0.45);
       text-transform: uppercase;
       letter-spacing: 3px;
       cursor: pointer;
   }
+  .single-project>:first-child{
+    text-align: center;
+  }
+ 
   .single-project-img{
 width: 250px;
 height: 150px;
@@ -107,7 +111,7 @@ margin-bottom: 30px;
     position: absolute;
     max-width: 960px;
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.725);
+    background-color: rgb(11 30 34);
     border-radius: 20px;
     height: 600px;
     box-shadow: 2px 4px 10px black;
@@ -128,7 +132,6 @@ margin-bottom: 30px;
       width: 30px;
       height: 30px;
       cursor: pointer;
-      z-index: 2;
       background-image: url(/img/xbottom-blue.png);
       border: none;
       background-repeat: no-repeat;
@@ -143,19 +146,32 @@ margin-bottom: 30px;
   }
   .single-project-window-name{
     margin: 0px 5px 60px 5px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
   }
   iframe{
     border-radius: 10px;
     border: 2px solid lightblue;
     width: 400px;
-    height: 200px;
+    height: 250px;
   }
   .video-describe{
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin: 0px 30px 30px 30px
-
+      margin: 0px 30px 100px 30px;
+      position: relative;
+  }
+  .video-describe::after{
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    border-top: 2px solid lightblue;
   }
   .single-project-window-describe{
       margin-left: 50px;
@@ -166,11 +182,21 @@ margin-bottom: 30px;
       width: 400px;
       text-transform: none;
       text-align: justify;
+      position: relative;
   }
-  .single-project-window-describe>:first-child{
+  .single-project-window-describe :first-child{
     margin-top: 0px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    
   }
+  
+  .single-project-window-underlinks{
+    display: flex;
+  }
+  
   .single-project-window-github{
+    margin: 0 25px 0 25px;
 text-decoration: none;
 display: flex;
 justify-content: center;
@@ -178,7 +204,7 @@ align-items: center;
 color: lightblue;
   }
   .single-project-window-github>p{
-    margin-left: 20px;
+    margin-left: 25px;
   }
   .single-project-window-github>img{
     width: 40px;
@@ -186,11 +212,85 @@ color: lightblue;
   }
   
 .view{
-  top: 0
+  top: 0;
+  
 }
 
   @media screen and (max-width: 1000px){
     .main-container-projects{
         justify-content: center;
+    }
+    .single-project-window{
+      max-width: 660px;
+      height: auto;
+      z-index: 10;
+    }
+    iframe{
+      margin: auto auto 50px auto;
+    }
+    .video-describe{
+        flex-direction: column;
+        margin: 5px 5px 50px 5px;
+        width: 600px;
+        align-items: center;
+    }
+    .video-describe::after{
+      width: 405px;
+      bottom: -35px;
+    }
+    .single-project-window-describe{
+        margin: 0 0 30px 0;
+    }
+    .single-project-window-describe :first-child{
+      margin-top: 0px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      
+    }
+    .single-project-window-underlinks{
+      display: flex;
+    }
+  
+    
+  }
+  @media screen and (max-width: 650px){
+    .single-project-window{
+      max-width: 275px;
+      height: auto;
+    }
+    .single-project-window-name{
+      font-size: 1.5rem;
+      width: 320px;
+    }
+    .single-project-window-describe{
+      margin: 0 0 30px 0;
+      color: gold;
+    }
+    iframe{
+      border: none;
+      border-radius: 10px;
+      border: 2px solid lightblue;
+      width: 300px;
+      height: 220px;
+      
+    }
+    .single-project-window-describe>p{
+      width: 300px;
+    }
+    .video-describe::after{
+      width: 220px;
+      border: 1px solid gold;
+      
+    }
+    .single-project-window-underlinks{
+      display: flex;
+      flex-direction: column;
+    }
+    .single-project-window-underlinks>:first-child{
+      margin-bottom: 30px;
+    }
+    .view{
+      position: sticky;
+      margin-top: -380px
     }
   }
