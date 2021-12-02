@@ -1,5 +1,6 @@
 const projectsWindow = document.querySelector('.main-container-projects')
-
+const iframe = document.querySelector('iframe')
+const video = document.querySelector('video')
 const blueCloseBtn = document.querySelector('.close-bottom-blue');
 const singleProjectWindow = document.querySelector(".single-project-window");
 const allSingleProjectWindows = document.querySelectorAll(".single-project-window");
@@ -8,8 +9,8 @@ const allSingleProjects = document.querySelectorAll(".single-project");
 
 allSingleProjects.forEach((singleProject)=>{
 const oknoZprojektem = singleProject.nextElementSibling
+
 function openWindow (){
-    console.log('dziala')
     oknoZprojektem.classList.add('view')
 }
 singleProject.addEventListener('click', openWindow)
@@ -17,9 +18,14 @@ singleProject.addEventListener('click', openWindow)
 
 allSingleProjectWindows.forEach((singleProjectWindow)=>{
 const closingBtn = singleProjectWindow.querySelector('.close-bottom-blue')
-function closingWindow(){
+const iframe = singleProjectWindow.querySelector('iframe')
+
+function closingWindow(e){
     singleProjectWindow.classList.remove('view')
+    videoStopper('single-project-window')
+    // iframe.src = "blank"
 }
 closingBtn.addEventListener('click', closingWindow)
 
 })
+
