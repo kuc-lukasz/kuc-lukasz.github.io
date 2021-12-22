@@ -22,8 +22,8 @@ const iframe = singleProjectWindow.querySelector('iframe')
 
 function closingWindow(e){
     singleProjectWindow.classList.remove('view')
-    videoStopper('single-project-window')
-    // iframe.src = "blank"
+    iframe.video.pause();
+    video.currentTime = 0;
 }
 closingBtn.addEventListener('click', closingWindow)
 
