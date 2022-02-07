@@ -5,11 +5,7 @@ import ProjectsStyles from "../styles/Projects.module.css";
 import Navigation from "./Navigation";
 
 export const Projects = () => {
-    const {
-        data: projects,
-        isPending,
-        error,
-    } = useFetch("http://localhost:3005/Projects");
+    const { data: projects, isPending, error } = useFetch("/storage/db.json");
 
     return (
         <div className={ProjectsStyles.mainWindow}>
