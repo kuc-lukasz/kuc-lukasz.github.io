@@ -15,7 +15,11 @@ export const Projects = () => {
         <div className={ProjectsStyles.mainWindow}>
             {error && <div>Nie możemy pobrać danych</div>}
             {isPending && <div>Loading ... </div>}
-            {projects && <SingleProject projects={projects} title="Projects" />}
+            {projects && projects.length > 0 ? (
+                <SingleProject projects={projects} title="Projects" />
+            ) : (
+                <></>
+            )}
             <Navigation />
         </div>
     );
