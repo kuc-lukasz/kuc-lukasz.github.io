@@ -1,0 +1,12 @@
+.mainWindow {
+    position: absolute;
+    top: 100px;
+    margin: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    clear: both;
+}
